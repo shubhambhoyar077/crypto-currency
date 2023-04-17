@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import fectCrtyptoCoins from '../../api_services/fetchCryptoCoins';
+import fetchCoinDetails from '../../api_services/fetchCoinDetails';
 
 const initialState = {
   cryptoCurrency: [],
@@ -7,6 +8,7 @@ const initialState = {
 };
 
 export const fetchCoins = createAsyncThunk('crypto/fetchCoins', fectCrtyptoCoins);
+export const fetchDetails = createAsyncThunk('crypto/fetchDetails', fetchCoinDetails);
 
 export const cryptoSlice = createSlice({
   name: 'crypto',
@@ -27,6 +29,26 @@ export const cryptoSlice = createSlice({
         });
       })
       .addCase(fetchCoins.rejected, (state) => ({
+        ...state,
+        isLoading: false,
+      }))
+      .addCase(fetchDetails.pending, (state) => ({
+        ...state,
+        isLoading: true,
+      }))
+      .addCase(fetchDetails.fulfilled, (state, action) => {
+        const coinDetails = action.payload[0];
+        const updateCoin = (state.cryptoCurrency.map((coin) => {
+          if (coin.id !== coinDetails.id) return coin;
+          return coinDetails;
+        }));
+        return ({
+          ...state,
+          cryptoCurrency: updateCoin,
+          isLoading: false,
+        });
+      })
+      .addCase(fetchDetails.rejected, (state) => ({
         ...state,
         isLoading: false,
       }));
