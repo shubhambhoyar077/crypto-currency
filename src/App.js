@@ -6,7 +6,7 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import IndexLayout from './components/IndexLayout';
-import CryptoList from './components/CrtyptoList';
+import CryptoList from './components/CryptoList';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
