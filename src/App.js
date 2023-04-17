@@ -1,5 +1,5 @@
 import './App.css';
-import { 
+import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
@@ -12,8 +12,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<IndexLayout />}>
       <Route index element={<CryptoList />} />
-    </Route>
-  )
+    </Route>,
+  ),
 );
 
 function App() {

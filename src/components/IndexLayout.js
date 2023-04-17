@@ -1,8 +1,8 @@
-import { Outlet } from "react-router-dom";
-import NavBar from "./NavBar";
-import "../css/navbar.css"
+import { Outlet } from 'react-router-dom';
+import NavBar from './NavBar';
+import '../css/navbar.css';
 
-export default function IndexLayout(){
+export default function IndexLayout() {
   return (
     <>
       <nav className="navbar">
