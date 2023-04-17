@@ -10,9 +10,9 @@ export default function CryptoCoinDetails() {
   const { id } = useParams();
 
   useEffect(() => {
-    dispatch(fetchDetails(id));
+    dispatch(fetchDetails(id))
   }, [dispatch]);
-  console.log(cryptoCurrency.filter((ele) => ele.id === id));
+
   return (
     <h1>dkjfnjn</h1>
   );
