@@ -1,0 +1,26 @@
+.intro{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  margin: 5% 0;
+}
+
+.intro h1{
+  font-size: 3rem;
+  font-family: var(--font-family);
+}
+
+.logo{
+  width: 12rem;
+  height: auto;
+}
+
+.searchbar{
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  padding: 1% 10%;
+  border: none;
+  border-radius: 5px;
+}
