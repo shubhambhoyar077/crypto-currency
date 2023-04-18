@@ -38,9 +38,9 @@ export default function CryptoCoinDetails() {
           Details
         </span>
       </div>
-      <div>
+      <ul>
         {Object.keys(coin.details).map((coindetail) => (
-          <div key={coindetail} className="row-data">
+          <li key={coindetail} className="row-data">
             <span>{coindetail}</span>
             <div>
               <span className="current-price">
@@ -49,9 +49,9 @@ export default function CryptoCoinDetails() {
               </span>
               <BsArrowRightCircle />
             </div>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </>
   );
 }
