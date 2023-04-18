@@ -75,6 +75,12 @@
   font-weight: 600;
 }
 
+.details-arrow{
+  align-self: flex-end;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 .coin img {
   width: 10rem;
   height: auto;
