@@ -19,7 +19,7 @@ const fetchCoinDetails = async (coinId) => {
       name: coin.name,
       image: coin.image,
       current_price: coin.current_price,
-      details:{
+      details: {
         market_cap: coin.market_cap,
         market_cap_rank: coin.market_cap_rank,
         fully_diluted_valuation: coin.fully_diluted_valuation,

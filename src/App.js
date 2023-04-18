@@ -13,7 +13,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<IndexLayout />}>
       <Route index element={<CryptoList />} />
-      <Route path='/coin/:id' element={<CryptoCoinDetails />} />
+      <Route path="/coin/:id" element={<CryptoCoinDetails />} />
     </Route>,
   ),
 );
