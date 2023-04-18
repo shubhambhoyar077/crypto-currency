@@ -5,7 +5,8 @@ import { fetchDetails } from '../redux/crypto/cryptoSlice';
 
 export default function CryptoCoinDetails() {
   const dispatch = useDispatch();
-  const { cryptoCurrency } = useSelector((state) => state.crypto);
+  const { cryptoCurrency, isLoading } = useSelector((state) => state.crypto);
+  let coin = [];
 
   const { id } = useParams();
 
@@ -13,7 +14,26 @@ export default function CryptoCoinDetails() {
     dispatch(fetchDetails(id))
   }, [dispatch]);
 
-  return (
-    <h1>dkjfnjn</h1>
-  );
+  coin = cryptoCurrency.filter((coin) => coin.id === id)[0];
+  console.log(coin);
+  if(isLoading){
+    return (
+      <h1>Loading...</h1>
+    );
+  }
+  else{
+
+    return (
+      <>
+      <div>
+      <img src={coin.image} alt={coin.name} />
+      <span>{coin.name}</span>
+      <span>
+        $
+        {coin.current_price}
+      </span>
+      </div>
+      </>
+    );
+  }
 }
