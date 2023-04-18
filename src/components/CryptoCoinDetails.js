@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { BsArrowRightCircle } from 'react-icons/bs';
 import { fetchDetails } from '../redux/crypto/cryptoSlice';
 
 export default function CryptoCoinDetails() {
@@ -30,16 +31,27 @@ export default function CryptoCoinDetails() {
           {coin.current_price}
         </span>
       </div>
-      <table>
-        <tbody>
-          {Object.keys(coin.details).map((coindetail) => (
-            <tr key={coindetail}>
-              <td>{coindetail}</td>
-              <td>{coin.details[coindetail]}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="sorting-bar">
+        <span>
+          {coin.name}
+          {' '}
+          Details
+        </span>
+      </div>
+      <div>
+        {Object.keys(coin.details).map((coindetail) => (
+          <div key={coindetail} className="row-data">
+            <span>{coindetail}</span>
+            <div>
+              <span className="current-price">
+                $
+                {coin.details[coindetail]}
+              </span>
+              <BsArrowRightCircle />
+            </div>
+          </div>
+        ))}
+      </div>
     </>
   );
 }

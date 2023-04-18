@@ -28,17 +28,11 @@ const fectCrtyptoCoins = async () => {
         price_change_24h: coin.price_change_24h,
         price_change_percentage_24h: coin.price_change_percentage_24h,
         market_cap_change_24h: coin.market_cap_change_24h,
-        market_cap_change_percentage_24h: coin.market_cap_change_percentage_24h,
         circulating_supply: coin.circulating_supply,
         total_supply: coin.total_supply,
         max_supply: coin.max_supply,
         ath: coin.ath,
         ath_change_percentage: coin.ath_change_percentage,
-        ath_date: coin.ath_date,
-        atl: coin.atl,
-        atl_change_percentage: coin.atl_change_percentage,
-        atl_date: coin.atl_date,
-        last_updated: coin.last_updated,
       },
     })));
     return cryptoCoins;
