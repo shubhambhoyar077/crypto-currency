@@ -6,6 +6,11 @@
   --middle-border-color: #35548B;
 }
 
+a{
+  text-decoration: none;
+  color: white;
+}
+
 body {
   margin: 0;
   font-family:
