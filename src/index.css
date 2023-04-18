@@ -1,3 +1,11 @@
+:root{
+  --bright-color: #5587E2;
+  --bit-dark-color:#4167AE;
+  --dark-color: #3F63A6;
+  --top-bar-color: #4369B2;
+  --middle-border-color: #35548B;
+}
+
 body {
   margin: 0;
   font-family:
@@ -14,6 +22,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: white;
+  background-color: var(--bright-color);
 }
 
 code {
