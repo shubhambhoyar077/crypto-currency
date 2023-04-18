@@ -1,3 +1,7 @@
+/* :root{
+  --primary-color: var()
+} */
+
 .App {
   text-align: center;
 }
