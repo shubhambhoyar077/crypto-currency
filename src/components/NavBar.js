@@ -11,7 +11,7 @@ export default function NavBar() {
       </NavLink>
       <span>Crypto</span>
       <div>
-        <BsMic />
+        <BsMic className="mic" />
         <IoIosSettings />
       </div>
     </>
