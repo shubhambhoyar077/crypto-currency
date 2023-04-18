@@ -42,3 +42,21 @@
 .sort > *:hover{
   color: var(--bright-color)
 }
+
+.gridContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.coin{
+  background-color: var(--bit-dark-color);
+}
+
+.gridContainer > .coin:nth-child(4n+3),
+.gridContainer > .coin:nth-child(4n+2){
+  background-color: var(--dark-color);
+}
+.coin img {
+  width: 10rem;
+  height: auto;
+}
