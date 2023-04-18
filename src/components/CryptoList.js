@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { HiSortAscending, HiSortDescending } from 'react-icons/hi';
 import { fetchCoins } from '../redux/crypto/cryptoSlice';
 import CryptoCoin from './CryptoCoin';
+import logo from '../assets/clogo.png';
 
 export default function CryptoList() {
   const { cryptoCurrency, isLoading, error } = useSelector((state) => state.crypto);
@@ -43,12 +44,16 @@ export default function CryptoList() {
       <div>
         <div className="logo-part">
           <input
+            className="searchbar"
             type="text"
             value={searchText}
             onChange={handelSearch}
-            placeholder="Search"
+            placeholder="Search Coin"
           />
-          <h1>Crypto</h1>
+          <div className="intro">
+            <img className="logo" src={logo} alt="logo" />
+            <h1>Crypto</h1>
+          </div>
         </div>
         <div>
           <span>Crypto Coins</span>

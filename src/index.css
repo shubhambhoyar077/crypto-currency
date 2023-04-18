@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 :root{
   --bright-color: #5587E2;
   --bit-dark-color:#4167AE;
   --dark-color: #3F63A6;
   --top-bar-color: #4369B2;
   --middle-border-color: #35548B;
+
+  --font-family: Lato, Arial;
 }
 
 a{

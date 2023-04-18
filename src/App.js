@@ -1,4 +1,6 @@
 import './App.css';
+import './css/navbar.css';
+import './css/cryptolist.css';
 import {
   createBrowserRouter,
   createRoutesFromElements,
