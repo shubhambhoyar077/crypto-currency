@@ -28,9 +28,10 @@ export const cryptoSlice = createSlice({
           isLoading: false,
         });
       })
-      .addCase(fetchCoins.rejected, (state) => ({
+      .addCase(fetchCoins.rejected, (state, action) => ({
         ...state,
         isLoading: false,
+        error: action.payload,
       }))
       .addCase(fetchDetails.pending, (state) => ({
         ...state,
@@ -48,9 +49,10 @@ export const cryptoSlice = createSlice({
           isLoading: false,
         });
       })
-      .addCase(fetchDetails.rejected, (state) => ({
+      .addCase(fetchDetails.rejected, (state, action) => ({
         ...state,
         isLoading: false,
+        error: action.payload,
       }));
   },
 });
