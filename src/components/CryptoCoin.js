@@ -5,7 +5,8 @@ export default function CryptoCoin({ coin }) {
   return (
     <NavLink to={`/coin/${coin.id}`} className="coin">
       <img src={coin.image} alt={coin.name} />
-      <span>{coin.name}</span>
+
+      <h3>{coin.name}</h3>
       <span>
         $
         {coin.current_price}

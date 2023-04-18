@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
 :root{
   --bright-color: #5587E2;
   --bit-dark-color:#4167AE;
