@@ -7,12 +7,13 @@ export default function CryptoCoinDetails() {
   const dispatch = useDispatch();
   const { cryptoCurrency, isLoading } = useSelector((state) => state.crypto);
   const { id } = useParams();
-
+  const coin = cryptoCurrency.find((coin) => coin.id === id);
   useEffect(() => {
-    dispatch(fetchDetails(id));
+    if (!coin.details) {
+      dispatch(fetchDetails(id));
+    }
   }, [dispatch]);
 
-  const coin = cryptoCurrency.find((coin) => coin.id === id);
   if (isLoading) {
     return (
       <h1>Loading...</h1>
@@ -29,6 +30,16 @@ export default function CryptoCoinDetails() {
           {coin.current_price}
         </span>
       </div>
+      <table>
+        <tbody>
+          {Object.keys(coin.details).map((coindetail) => (
+            <tr key={coindetail}>
+              <td>{coindetail}</td>
+              <td>{coin.details[coindetail]}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </>
   );
 }

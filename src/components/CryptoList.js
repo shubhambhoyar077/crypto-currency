@@ -7,7 +7,9 @@ export default function CryptoList() {
   const { cryptoCurrency, isLoading, error } = useSelector((state) => state.crypto);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchCoins());
+    if (!cryptoCurrency.length) {
+      dispatch(fetchCoins());
+    }
   }, [dispatch]);
 
   if (isLoading) {
