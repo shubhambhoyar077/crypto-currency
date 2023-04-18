@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
 export default function CryptoCoin({ coin }) {
@@ -12,3 +13,12 @@ export default function CryptoCoin({ coin }) {
     </NavLink>
   );
 }
+
+CryptoCoin.propTypes = {
+  coin: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    current_price: PropTypes.number,
+    image: PropTypes.string,
+  }).isRequired,
+};
