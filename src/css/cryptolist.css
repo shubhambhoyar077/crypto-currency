@@ -24,3 +24,21 @@
   border: none;
   border-radius: 5px;
 }
+
+.sorting-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 1% var(--common-left-right-padding);
+  background-color: var(--middle-border-color);
+}
+
+.sort > *{
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.sort > *:hover{
+  color: var(--bright-color)
+}

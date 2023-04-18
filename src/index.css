@@ -7,6 +7,8 @@
   --middle-border-color: #35548B;
 
   --font-family: Lato, Arial;
+
+  --common-left-right-padding: 5%;
 }
 
 a{

@@ -55,10 +55,12 @@ export default function CryptoList() {
             <h1>Crypto</h1>
           </div>
         </div>
-        <div>
+        <div className="sorting-bar">
           <span>Crypto Coins</span>
-          <HiSortAscending onClick={handelAscending} />
-          <HiSortDescending onClick={handelDescending} />
+          <div className="sort">
+            <HiSortAscending onClick={handelAscending} />
+            <HiSortDescending onClick={handelDescending} />
+          </div>
         </div>
         <div className="gridContainer">
           {searchList.map((coin) => <CryptoCoin key={coin.id} coin={coin} />)}
