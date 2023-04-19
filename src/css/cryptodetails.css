@@ -1,0 +1,47 @@
+.row-data {
+  font-family: var(--font-family);
+  align-self: flex-end;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem var(--common-left-right-padding);
+}
+
+.row-data:nth-child(odd) {
+  background-color: var(--bit-dark-color);
+}
+
+.row-data:nth-child(even) {
+  background-color: var(--dark-color);
+}
+
+.current-price {
+  padding-right: 1rem;
+}
+
+.coin-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2% var(--common-left-right-padding);
+}
+
+.coin-intro img {
+  width: 12rem;
+  height: auto;
+}
+
+.coin-intro h3 {
+  font-family: var(--font-family);
+  align-self: flex-end;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.coin-intro span {
+  font-family: var(--font-family);
+  align-self: flex-end;
+  font-size: 1rem;
+  font-weight: 600;
+}
