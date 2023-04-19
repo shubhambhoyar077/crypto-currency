@@ -1,11 +1,10 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
+import { BrowserRouter, useParams } from 'react-router-dom';
 import CryptoCoinDetails from '../components/CryptoCoinDetails';
 import '@testing-library/jest-dom';
-import { BrowserRouter } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
 
 const mockStore = configureMockStore([]);
 jest.mock('react-router-dom', () => ({
@@ -25,7 +24,7 @@ describe('Details component', () => {
             name: 'Coin 1',
             current_price: 100,
             image: '#',
-            details: {test:"1000"},
+            details: { test: '1000' },
           },
         ],
       },
@@ -37,13 +36,12 @@ describe('Details component', () => {
     });
   });
 
-  
   it('should render the Details of Coins from store', () => {
     render(
       <BrowserRouter>
-      <Provider store={store}>
-        <CryptoCoinDetails />
-      </Provider>
+        <Provider store={store}>
+          <CryptoCoinDetails />
+        </Provider>
       </BrowserRouter>,
     );
 

@@ -1,22 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
-:root{
-  --bright-color: #5587E2;
-  --bit-dark-color:#4167AE;
-  --dark-color: #3F63A6;
-  --top-bar-color: #4369B2;
-  --middle-border-color: #35548B;
 
-  --font-family: Lato, Arial;
-
+:root {
+  --bright-color: #5587e2;
+  --bit-dark-color: #4167ae;
+  --dark-color: #3f63a6;
+  --top-bar-color: #4369b2;
+  --middle-border-color: #35548b;
+  --font-family: lato, arial;
   --common-left-right-padding: 5%;
 }
 
-a{
+a {
   text-decoration: none;
   color: white;
 }
