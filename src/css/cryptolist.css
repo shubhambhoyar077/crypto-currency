@@ -1,4 +1,4 @@
-.intro{
+.intro {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,17 +6,17 @@
   margin: 5% 0;
 }
 
-.intro h1{
+.intro h1 {
   font-size: 3rem;
   font-family: var(--font-family);
 }
 
-.logo{
+.logo {
   width: 12rem;
   height: auto;
 }
 
-.searchbar{
+.searchbar {
   text-align: center;
   font-size: 1rem;
   font-family: var(--font-family);
@@ -25,7 +25,7 @@
   border-radius: 5px;
 }
 
-.sorting-bar{
+.sorting-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,21 +34,21 @@
   background-color: var(--middle-border-color);
 }
 
-.sort > *{
+.sort > * {
   cursor: pointer;
   margin-left: 1rem;
 }
 
-.sort > *:hover{
-  color: var(--bright-color)
+.sort > *:hover {
+  color: var(--bright-color);
 }
 
-.gridContainer{
+.gridContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.coin{
+.coin {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,11 +57,11 @@
 }
 
 .gridContainer > .coin:nth-child(4n+3),
-.gridContainer > .coin:nth-child(4n+2){
+.gridContainer > .coin:nth-child(4n+2) {
   background-color: var(--dark-color);
 }
 
-.coin h3{
+.coin h3 {
   font-family: var(--font-family);
   align-self: flex-end;
   font-size: 1.5rem;
@@ -75,7 +75,7 @@
   font-weight: 600;
 }
 
-.details-arrow{
+.details-arrow {
   align-self: flex-end;
   font-size: 1.5rem;
   font-weight: 600;

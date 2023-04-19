@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-between;
   font-size: 1.5rem;
@@ -7,6 +7,6 @@
   background-color: var(--top-bar-color);
 }
 
-.mic{
+.mic {
   margin-right: 1rem;
 }
