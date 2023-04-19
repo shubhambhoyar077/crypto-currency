@@ -2,18 +2,19 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { BsArrowRightCircle } from 'react-icons/bs';
-import { fetchDetails } from '../redux/crypto/cryptoSlice';
+import { fetchCoins } from '../redux/crypto/cryptoSlice';
 
 export default function CryptoCoinDetails() {
   const dispatch = useDispatch();
   const { cryptoCurrency, isLoading } = useSelector((state) => state.crypto);
   const { id } = useParams();
-  const coin = cryptoCurrency.find((coin) => coin.id === id);
+
   useEffect(() => {
-    if (!coin.details) {
-      dispatch(fetchDetails(id));
+    if (!cryptoCurrency.length) {
+      dispatch(fetchCoins());
     }
   }, [dispatch]);
+  const coin = cryptoCurrency.find((coin) => coin.id === id);
 
   if (isLoading) {
     return (
