@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.AppContainer {
+  max-width: 1100px;
+}
+
+@media all and (min-width: 768px) {
+  .App {
+    align-items: center;
+  }
+
+  .AppContainer {
+    width: 1100px;
+    box-shadow: 10px 10px 10px 10px var(--dark-color);
+    border-radius: 5px;
+  }
+}
